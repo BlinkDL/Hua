@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Hua - AI painting - Closed Alpha</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#005678">
+    <meta name="msapplication-TileColor" content="#005678">
+    <meta name="theme-color" content="#ffffff">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        #sketch {
+            height: 100%;
+            width: 100%;
+            display: block;
+            position: absolute;
+            cursor: crosshair;
+            overflow: hidden;
+        }
+
+        #tools {
+            float: left;
+            z-index: 99;
+            position: relative;
+        }
+
+        #sketch canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        #tools button {
+            width: 50px;
+            height: 50px;
+            padding-top: 0.2em;
+            background: #fff;
+            border: 1px solid #bbb;
+            display: block;
+            font-size: 130%;
+            line-height: 0.9;
+        }
+
+        #tools button span {
+            font-size: 65%;
+        }
+
+        #tools button:hover {
+            background: #ddd;
+        }
+
+        #tools button.active {
+            background: #dfd;
+        }
+
+        #help {
+            background: #fff;
+            width: 600px;
+            display: block;
+            border: 1px solid #bbb;
+            padding: 0.5em;
+            line-height: 1.5;
+        }
+
+        #prompt {
+            width: 400px;
+            height: 200px;
+            font-family: monospace;
+            display: block;
+        }
+
+        #config {
+            width: 400px;
+            height: 100px;
+            font-family: monospace;
+            display: block;
+        }
+
+        .hide {
+            display: none !important;
+        }
+
+        .drawBox {
+            cursor: crosshair;
+            border: 3px dashed black;
+            outline: none !important;
+            position: absolute;
+            overflow: hidden;
+            resize: none;
+            background: transparent;
+            font-weight: bold;
+            color: black;
+            text-shadow:
+                -1px -1px 0 #fff,
+                0 -1px 0 #fff,
+                1px -1px 0 #fff,
+                1px 0 0 #fff,
+                1px 1px 0 #fff,
+                0 1px 0 #fff,
+                -1px 1px 0 #fff,
+                -1px 0 0 #fff;
+        }
+
+        #error {
+            z-index: 999;
+            position: fixed;
+            display: block;
+            text-align: center;
+            padding: 0.5em;
+            top: 5%;
+            left: 50%;
+            transform: translate(-50%, 0);
+            border: 1px solid #bbb;
+            background-color: #dfd;
+        }
+
+        #palette {
+            width: 16em;
+            line-height: 0;
+        }
+
+        #palette span {
+            width: 2em;
+            height: 2em;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        #palette span:hover {
+            border: 3px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="error" class="hide">
+        <span id="error_msg"></span>
+        <button type="button" style="width: 30px; float:right; margin-left: 30px;" data-id="error_close">❌</button>
+    </div>
+    <div id="tools">
+        <div style="float: left;">
+            <button type="button" data-id="prompt_show">📜<br><span>Prompt</span></button>
+            <button type="button" data-id="mask_draw">🌗<span>Mask</span></button>
+            <button type="button" data-id="mask_show" style="padding-top: 0;"><span>show mask</span></button>
+            <button type="button" data-id="brush_draw" class="hide">🖌️<br><span>Brush</span></button>
+            <button type="button" data-id="modify_mode" style="padding-top: 0;" class="hide"><span>tweak
+                    mode</span></button>
+            <button type="button" data-id="palette_show" class="hide">🌈<br><span>Palette</span></button>
+            <button type="button" data-id="img_copy">✂️<br><span>Copy</span></button>
+            <button type="button" data-id="img_paste">📋<br><span>Paste</span></button>
+            <button type="button" data-id="img_load">📁<br><span>Load</span></button>
+            <button type="button" data-id="img_save">💾<br><span>Save</span></button>
+            <button type="button" data-id="config_show">⚙️<br><span>Config</span></button>
+            <button type="button" data-id="help_show">❓<br><span>Help</span></button>
+        </div>
+    </div>
+    <div style="float:left; z-index: 99; position: relative;">
+        <div id="help" class="hide"> </div>
+        <textarea id="prompt" class="hide"></textarea>
+        <div id="palette" class="hide"></div>
+        <textarea id="config" class="hide"></textarea>
+    </div>
+    <div id="sketch">
+        <canvas id="bg"></canvas>
+        <canvas id="canvas"></canvas>
+        <canvas id="mask"></canvas>
+        <a id="save_canvas" class="hide"></a>
+        <input type="file" id="imageLoader" class="hide" />
+    </div>
+    <script src="index.js"> </script>
+    <script async src="//static.getclicky.com/101385777.js"></script>
+</body>
+
+</html>
