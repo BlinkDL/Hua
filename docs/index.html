@@ -191,7 +191,7 @@
             display: block;
             text-align: center;
             padding: 0.5em;
-            top: 5%;
+            top: 1em;
             left: 50%;
             transform: translate(-50%, 0);
             border: 1px solid #bbb;
@@ -248,7 +248,7 @@
         <canvas id="canvas"></canvas>
         <canvas id="mask"></canvas>
         <a id="save_canvas" class="hide"></a>
-        <input type="file" id="imageLoader" class="hide" />
+        <input type="file" id="imageLoader" class="hide" onclick="this.value=null;" />
     </div>
     <script src="index.js"> </script>
     <script async src="//static.getclicky.com/101385777.js"></script>
