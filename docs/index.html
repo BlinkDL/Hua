@@ -51,30 +51,30 @@
         }
 
         html {
-            font-size: 17px;
+            font-size: 16px;
         }
 
         @media (max-width: 1920px) {
-            html {
-                font-size: 16px;
-            }
-        }
-
-        @media (max-width: 1500px) {
             html {
                 font-size: 15px;
             }
         }
 
+        @media (max-width: 1500px) {
+            html {
+                font-size: 14px;
+            }
+        }
+
         @media (max-width: 1350px) {
             html {
-                font-size: 13.5px;
+                font-size: 13px;
             }
         }
 
         @media (max-width: 900px) {
             html {
-                font-size: 13px;
+                font-size: 12.5px;
             }
         }
 
@@ -112,8 +112,8 @@
         }
 
         #tools button {
-            width: 50px;
-            height: 50px;
+            width: 2.5em;
+            height: 2.5em;
             padding-top: 0.2em;
             background: #fff;
             border: 1px solid #bbb;
@@ -124,6 +124,7 @@
 
         #tools button span {
             font-size: 62%;
+            font-weight: bold;
         }
 
         #tools button:hover {
@@ -136,25 +137,23 @@
 
         #help {
             background: #fff;
-            width: 600px;
+            width: 40em;
             display: block;
             border: 1px solid #bbb;
             padding: 0.5em;
             line-height: 1.5;
         }
 
-        #prompt {
-            width: 400px;
-            height: 200px;
+        #prompt, #config {
+            width: 50em;
+            height: 20em;
             font-family: 'JetBrains Mono', monospace;
             display: block;
+            line-height: 1.5;
         }
 
         #config {
-            width: 400px;
-            height: 100px;
-            font-family: 'JetBrains Mono', monospace;
-            display: block;
+            height: 10em;
         }
 
         .hide {
@@ -216,7 +215,7 @@
 <body>
     <div id="error" class="hide">
         <span id="error_msg"></span>
-        <button type="button" style="width: 30px; float:right; margin-left: 30px;" data-id="error_close">❌</button>
+        <button type="button" style="width: 2em; float:right; margin-left: 2em;" data-id="error_close">❌</button>
     </div>
     <div id="tools">
         <div style="float: left;">
