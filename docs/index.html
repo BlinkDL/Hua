@@ -164,8 +164,9 @@
         }
 
         .drawBox {
+            display: block;
             cursor: crosshair;
-            border: 3px dashed black;
+            border: 2px dashed black;
             outline: none !important;
             position: absolute;
             overflow: hidden;
@@ -235,7 +236,7 @@
             <button type="button" data-id="config_show">⚙️<br><span>Config</span></button>
             <button type="button" data-id="help_show">❓<br><span>Help</span></button>
         </div>
-        <div style="float:left; z-index: 99; position: relative;">
+        <div style="z-index: 99; position: absolute; margin-left: 3.5em">
             <div id="help" class="hide"> </div>
             <textarea id="prompt" class="hide"></textarea>
             <div id="palette" class="hide"></div>
