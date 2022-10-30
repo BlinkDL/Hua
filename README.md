@@ -13,7 +13,6 @@ This is 100% free.
 
 * Run LATEST (!!!) https://github.com/AUTOMATIC1111/stable-diffusion-webui with --api (will listen at 127.0.0.1:7860 by default). That is, "set COMMANDLINE_ARGS=--api" in webui-user.bat.
 * Use sd-v1.5-inpainting model (https://huggingface.co/runwayml/stable-diffusion-inpainting) for best results.
-* Update A1111 to latest commit, or you might see CORS error in browser console.
 * Run A1111 with --listen to allow LAN access.
 
 Then you can use https://www.PaintHua.com for txt2img / img2img / inpainting / outpainting.
