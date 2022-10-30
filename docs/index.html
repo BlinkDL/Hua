@@ -47,7 +47,7 @@
         body {
             width: 100%;
             height: 100%;
-            overflow: hidden;
+            /* overflow: hidden; */
         }
 
         html {
@@ -98,7 +98,7 @@
         #tools {
             float: left;
             z-index: 99;
-            position: relative;
+            position: fixed;
         }
 
         #sketch canvas {
@@ -125,6 +125,8 @@
         #tools button span {
             font-size: 62%;
             font-weight: bold;
+            line-height: 0.9;
+            position: relative;
         }
 
         #tools button:hover {
@@ -137,14 +139,15 @@
 
         #help {
             background: #fff;
-            width: 40em;
+            width: 50em;
             display: block;
             border: 1px solid #bbb;
             padding: 0.5em;
             line-height: 1.5;
         }
 
-        #prompt, #config {
+        #prompt,
+        #config {
             width: 50em;
             height: 20em;
             font-family: 'JetBrains Mono', monospace;
@@ -195,13 +198,13 @@
         }
 
         #palette {
-            width: 16em;
+            width: 10em;
             line-height: 0;
         }
 
         #palette span {
-            width: 2em;
-            height: 2em;
+            width: 2.5em;
+            height: 2.5em;
             display: inline-block;
             cursor: pointer;
         }
@@ -221,11 +224,10 @@
         <div style="float: left;">
             <button type="button" data-id="prompt_show">📜<br><span>Prompt</span></button>
             <button type="button" data-id="mask_draw">🌗<span>Mask</span></button>
-            <button type="button" data-id="mask_show" style="padding-top: 0;"><span>show mask</span></button>
-            <button type="button" data-id="brush_draw" class="hide">🖌️<br><span>Brush</span></button>
-            <button type="button" data-id="modify_mode" style="padding-top: 0;" class="hide"><span>tweak
-                    mode</span></button>
-            <button type="button" data-id="palette_show" class="hide">🌈<br><span>Palette</span></button>
+            <button type="button" data-id="mask_show"><span style="top: -0.3em;">show mask</span></button>
+            <button type="button" data-id="brush_draw" class="">🖌️<br><span>Brush</span></button>
+            <button type="button" data-id="palette_show" class="">🌈<br><span>Palette</span></button>
+            <button type="button" data-id="i2i_mode"><span style="top: -0.3em;">i2i mode</span></button>
             <button type="button" data-id="img_copy">✂️<br><span>Copy</span></button>
             <button type="button" data-id="img_paste">📋<br><span>Paste</span></button>
             <button type="button" data-id="img_load">📁<br><span>Load</span></button>
@@ -233,12 +235,12 @@
             <button type="button" data-id="config_show">⚙️<br><span>Config</span></button>
             <button type="button" data-id="help_show">❓<br><span>Help</span></button>
         </div>
-    </div>
-    <div style="float:left; z-index: 99; position: relative;">
-        <div id="help" class="hide"> </div>
-        <textarea id="prompt" class="hide"></textarea>
-        <div id="palette" class="hide"></div>
-        <textarea id="config" class="hide"></textarea>
+        <div style="float:left; z-index: 99; position: relative;">
+            <div id="help" class="hide"> </div>
+            <textarea id="prompt" class="hide"></textarea>
+            <div id="palette" class="hide"></div>
+            <textarea id="config" class="hide"></textarea>
+        </div>
     </div>
     <div id="sketch">
         <canvas id="bg"></canvas>
