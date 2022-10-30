@@ -9,7 +9,7 @@ Closed Alpha at this moment. The JS will be fully open-source afterwards.
 
 ## How to use
 
-Run https://github.com/AUTOMATIC1111/stable-diffusion-webui with --api (will listen at 127.0.0.1:7860 by default).
+This is 100% free. Run https://github.com/AUTOMATIC1111/stable-diffusion-webui with --api (will listen at 127.0.0.1:7860 by default). Use sd-v1.5-inpainting model. If you see CORS error, update A1111 to latest commit.
 
 Then you can use https://www.PaintHua.com for txt2img / img2img / inpainting / outpainting.
 
