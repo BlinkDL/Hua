@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hua - AI painting - www.PaintHua.com</title>
+    <title>Hua - AI painting with Stable Diffusion - www.PaintHua.com</title>
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -84,6 +84,27 @@
             }
         }
 
+        ul {
+            margin-block-start: 0.3em;
+            margin-block-end: 0.3em;
+            padding-inline-start: 1.3em;
+        }
+
+        ol {
+            margin-block-start: 0.3em;
+            margin-block-end: 0.3em;
+            padding-inline-start: 1em;
+        }
+
+        .unselectable {
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
         /****************************************************************************************/
 
         #sketch {
@@ -112,18 +133,18 @@
         }
 
         #tools button {
-            width: 2.5em;
-            height: 2.5em;
+            width: 2.3em;
+            height: 2.3em;
             padding-top: 0.2em;
             background: #fff;
             border: 1px solid #bbb;
             display: block;
             font-size: 130%;
-            line-height: 0.9;
+            line-height: 0.8;
         }
 
         #tools button span {
-            font-size: 62%;
+            font-size: 60%;
             font-weight: bold;
             line-height: 0.9;
             position: relative;
@@ -229,6 +250,7 @@
             <button type="button" data-id="brush_draw" class="">🖌️<br><span>Brush</span></button>
             <button type="button" data-id="palette_show" class="">🌈<br><span>Palette</span></button>
             <button type="button" data-id="i2i_mode"><span style="top: -0.3em;">i2i mode</span></button>
+            <button type="button" data-id="img_undo">⬅️<br><span>Undo</span></button>
             <button type="button" data-id="img_copy">✂️<br><span>Copy</span></button>
             <button type="button" data-id="img_paste">📋<br><span>Paste</span></button>
             <button type="button" data-id="img_load">📁<br><span>Load</span></button>
@@ -236,7 +258,7 @@
             <button type="button" data-id="config_show">⚙️<br><span>Config</span></button>
             <button type="button" data-id="help_show">❓<br><span>Help</span></button>
         </div>
-        <div style="z-index: 99; position: absolute; margin-left: 3.5em">
+        <div style="z-index: 99; position: absolute; margin-left: 3.2em">
             <div id="help" class="hide"> </div>
             <textarea id="prompt" class="hide"></textarea>
             <div id="palette" class="hide"></div>
