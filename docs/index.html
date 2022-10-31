@@ -47,7 +47,6 @@
         body {
             width: 100%;
             height: 100%;
-            /* overflow: hidden; */
         }
 
         html {
@@ -84,6 +83,10 @@
             }
         }
 
+        button {
+            cursor: pointer;
+        }
+
         ul {
             margin-block-start: 0.3em;
             margin-block-end: 0.3em;
@@ -105,6 +108,10 @@
             user-select: none;
         }
 
+        .hide {
+            display: none !important;
+        }
+
         /****************************************************************************************/
 
         #sketch {
@@ -116,20 +123,39 @@
             overflow: hidden;
         }
 
-        #tools {
-            float: left;
-            z-index: 99;
-            position: fixed;
-        }
-
         #sketch canvas {
             position: absolute;
             top: 0;
             left: 0;
         }
 
-        button {
-            cursor: pointer;
+        .drawBox {
+            display: block;
+            cursor: crosshair;
+            border: 2px dashed black;
+            padding: 0.2em;
+            outline: none !important;
+            position: absolute;
+            overflow: hidden;
+            resize: none;
+            background: transparent;
+            font-weight: bold;
+            color: black;
+            text-shadow:
+                -2px -2px 0 #fff,
+                0 -2px 0 #fff,
+                2px -2px 0 #fff,
+                2px 0 0 #fff,
+                2px 2px 0 #fff,
+                0 2px 0 #fff,
+                -2px 2px 0 #fff,
+                -2px 0 0 #fff;
+        }
+
+        #tools {
+            float: left;
+            z-index: 99;
+            position: fixed;
         }
 
         #tools button {
@@ -181,33 +207,6 @@
             height: 10em;
         }
 
-        .hide {
-            display: none !important;
-        }
-
-        .drawBox {
-            display: block;
-            cursor: crosshair;
-            border: 2px dashed black;
-            padding: 0.2em;
-            outline: none !important;
-            position: absolute;
-            overflow: hidden;
-            resize: none;
-            background: transparent;
-            font-weight: bold;
-            color: black;
-            text-shadow:
-                -2px -2px 0 #fff,
-                0 -2px 0 #fff,
-                2px -2px 0 #fff,
-                2px 0 0 #fff,
-                2px 2px 0 #fff,
-                0 2px 0 #fff,
-                -2px 2px 0 #fff,
-                -2px 0 0 #fff;
-        }
-
         #error {
             z-index: 999;
             position: fixed;
@@ -248,15 +247,16 @@
         <div style="float: left;">
             <button type="button" data-id="prompt_show">📜<br><span>Prompt</span></button>
             <button type="button" data-id="mask_draw">🌗<span>Mask</span></button>
-            <button type="button" data-id="mask_show"><span style="top: -0.3em;">show mask</span></button>
+            <button type="button" data-id="mask_show"><span style="top: -0.4em;">show mask</span></button>
             <button type="button" data-id="brush_draw" class="">🖌️<br><span>Brush</span></button>
             <button type="button" data-id="palette_show" class="">🌈<br><span>Palette</span></button>
-            <button type="button" data-id="i2i_mode"><span style="top: -0.3em;">i2i mode</span></button>
+            <button type="button" data-id="i2i_mode"><span style="top: -0.4em;">i2i mode</span></button>
             <button type="button" data-id="img_undo">⬅️<br><span>Ctrl+Z</span></button>
             <button type="button" data-id="img_copy">✂️<br><span>Ctrl+C</span></button>
             <button type="button" data-id="img_paste">📋<br><span>Ctrl+V</span></button>
             <button type="button" data-id="img_load">📁<br><span>Ctrl+O</span></button>
             <button type="button" data-id="img_save">💾<br><span>Ctrl+S</span></button>
+            <button type="button" data-id="grid_mode"><span style="top: -0.4em;">grid mode</span></button>
             <button type="button" data-id="config_show">⚙️<br><span>Config</span></button>
             <button type="button" data-id="help_show">❓<br><span>Help</span></button>
         </div>
