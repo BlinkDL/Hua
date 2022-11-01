@@ -5,6 +5,8 @@ Website: https://www.PaintHua.com
 
 Discord: https://discord.gg/y9kMYtjgFZ
 
+My Pixiv: https://www.pixiv.net/en/users/86965119
+
 Closed Alpha at this moment. The JS will be fully open-source afterwards.
 
 ## How to use
