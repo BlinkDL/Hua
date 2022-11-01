@@ -157,7 +157,7 @@
             background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
             background-size: 15px 2px, 15px 2px, 2px 15px, 2px 15px;
             background-position: left top, right bottom, left bottom, right top;
-            animation: border-dance 1s infinite linear;
+            animation: border-dance 0.5s infinite linear;
         }
 
         @keyframes border-dance {
@@ -286,9 +286,6 @@
         </div>
     </div>
     <div id="sketch">
-        <canvas id="bg"></canvas>
-        <canvas id="canvas"></canvas>
-        <canvas id="mask"></canvas>
         <a id="save_canvas" class="hide"></a>
         <input type="file" id="imageLoader" class="hide" onclick="this.value=null;" />
     </div>
