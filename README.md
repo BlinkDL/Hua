@@ -5,8 +5,6 @@ Website: https://www.PaintHua.com
 
 Discord: https://discord.gg/y9kMYtjgFZ
 
-My Pixiv: https://www.pixiv.net/en/users/86965119
-
 Closed Alpha at this moment. Will be fully open-source when I finish all major functions.
 
 ## How to use
