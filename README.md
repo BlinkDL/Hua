@@ -7,7 +7,7 @@ Discord: https://discord.gg/y9kMYtjgFZ
 
 My Pixiv: https://www.pixiv.net/en/users/86965119
 
-Closed Alpha at this moment. The JS will be fully open-source afterwards.
+Closed Alpha at this moment. Will be fully open-source when I finish all major functions.
 
 ## How to use
 
@@ -21,3 +21,5 @@ This is 100% free.
 Then you can use https://www.PaintHua.com for txt2img / img2img / inpainting / outpainting.
 
 ![](https://raw.githubusercontent.com/BlinkDL/Hua/main/Hua-Demo.gif)
+
+![](https://raw.githubusercontent.com/BlinkDL/Hua/main/Hua-Demo2.gif)
