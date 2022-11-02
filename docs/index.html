@@ -83,6 +83,8 @@
             }
         }
 
+        /****************************************************************************************/
+
         a,
         a:hover,
         a:visited,
@@ -92,6 +94,7 @@
 
         button {
             cursor: pointer;
+            border: 1px solid #bbb;
         }
 
         ul {
@@ -165,6 +168,7 @@
             background-size: 15px 2px, 15px 2px, 2px 15px, 2px 15px;
             background-position: left top, right bottom, left bottom, right top;
             animation: border-dance 0.5s infinite linear;
+            border: 0px !important;
         }
 
         @keyframes border-dance {
@@ -177,6 +181,20 @@
             }
         }
 
+        .decision_box button[data-id="box_confirm"]:hover {
+            background: #99e550;
+        }
+
+        .decision_box button[data-id="box_retry"]:hover {
+            background: #5fcde4;
+        }
+
+        .decision_box button[data-id="box_cancel"]:hover {
+            background: #d95763;
+        }
+
+        /****************************************************************************************/
+
         #tools {
             float: left;
             z-index: 99;
@@ -188,7 +206,6 @@
             height: 2.3em;
             padding-top: 0.2em;
             background: #fff;
-            border: 1px solid #bbb;
             display: block;
             font-size: 130%;
             line-height: 0.8;
@@ -202,7 +219,7 @@
         }
 
         #tools button:hover {
-            background: #ddd;
+            background: #ccc !important;
         }
 
         #tools button.active {
@@ -274,8 +291,9 @@
             <button type="button" data-id="mask_draw">🌗<span>Mask</span></button>
             <button type="button" data-id="mask_show"><span style="top: -0.4em;">show mask</span></button>
             <button type="button" data-id="brush_draw" class="">🖌️<br><span>Brush</span></button>
-            <button type="button" data-id="palette_show" class="">🌈<br><span>Palette</span></button>
+            <button type="button" data-id="palette_show" class="">🎨<br><span>Palette</span></button>
             <button type="button" data-id="i2i_mode"><span style="top: -0.4em;">i2i mode</span></button>
+            <button type="button" data-id="img_redo">➡️<br><span>Ctrl+Y</span></button>
             <button type="button" data-id="img_undo">⬅️<br><span>Ctrl+Z</span></button>
             <button type="button" data-id="img_copy">✂️<br><span>Ctrl+C</span></button>
             <button type="button" data-id="img_paste">📋<br><span>Ctrl+V</span></button>
