@@ -11,7 +11,10 @@ Closed Alpha at this moment. Will be fully open-source when I finish all major f
 
 This is 100% free.
 
-* Run LATEST (!!!) https://github.com/AUTOMATIC1111/stable-diffusion-webui with --api (will listen at 127.0.0.1:7860 by default). That is, "set COMMANDLINE_ARGS=--api" in webui-user.bat.
+### NOTE: Latest A1111 commit breaks PaintHua: https://github.com/AUTOMATIC1111/stable-diffusion-webui/commit/5f0117154382eb0e2547c72630256681673e353b
+### You can manually comment out the "app.user_middleware = xxxx" line in webui.py to solve it.
+
+* Run https://github.com/AUTOMATIC1111/stable-diffusion-webui with --api (will listen at 127.0.0.1:7860 by default). That is, "set COMMANDLINE_ARGS=--api" in webui-user.bat.
 * Use sd-v1.5-inpainting model (https://huggingface.co/runwayml/stable-diffusion-inpainting) for best results. 
 * More A1111 settings: Turn off "Apply color correction to img2img results", set "Inpainting conditioning mask strength" to 1.
 * Run A1111 with --listen to allow LAN access. When connecting to IP other than 127.0.0.1, google "enable mixed content" and change site settings. Because the site is HTTPS but A1111 server is HTTP, so the browser is blocking HTTP requests by default.
