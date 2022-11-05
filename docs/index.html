@@ -157,13 +157,12 @@
         .drawBox {
             display: block;
             cursor: crosshair;
-            border: 2px dashed black;
-            padding: 0.2em;
+            padding: 0.3em;
             outline: none !important;
+            border: 0px;
             position: absolute;
             overflow: hidden;
             resize: none;
-            background: transparent;
             font-weight: bold;
             color: #eee;
             text-shadow:
@@ -175,15 +174,18 @@
                 0 1px 0 #000,
                 -1px 1px 0 #000,
                 -1px 0 0 #000;
+            background-image: none;
+            background-repeat: no-repeat;
+            background-size: 1px 1px, calc(100% - 2px) 2px, 1px 1px, 2px calc(100% - 2px);
+            background-position: top left, top center, top right, center right, bottom right, bottom center, bottom left, center left;
         }
 
         .border_dance {
-            background-image: linear-gradient(90deg, #fff 50%, transparent 50%), linear-gradient(90deg, #fff 50%, transparent 50%), linear-gradient(0deg, #fff 50%, transparent 50%), linear-gradient(0deg, #fff 50%, transparent 50%);
+            background-image: linear-gradient(90deg, #fff 50%, transparent 50%), linear-gradient(90deg, #fff 50%, transparent 50%), linear-gradient(0deg, #fff 50%, transparent 50%), linear-gradient(0deg, #fff 50%, transparent 50%) !important;
             background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
             background-size: 15px 2px, 15px 2px, 2px 15px, 2px 15px;
             background-position: left top, right bottom, left bottom, right top;
             animation: border-dance 0.5s infinite linear;
-            border: 0px !important;
         }
 
         @keyframes border-dance {
@@ -245,11 +247,11 @@
         }
 
         #tools button.active {
-            background: #137;
+            background: #000;
         }
 
         #tools button.active:hover {
-            background: #247 !important;
+            background: #1f1f1f !important;
         }
 
         #help {
