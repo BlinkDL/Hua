@@ -47,6 +47,7 @@
         body {
             width: 100%;
             height: 100%;
+            background-color: #282828;
         }
 
         html {
@@ -122,6 +123,20 @@
             display: none !important;
         }
 
+        textarea {
+            color: #ddd;
+            background-color: #282828;
+        }
+
+        textarea:focus,
+        input:focus {
+            outline: 0;
+        }
+
+        *:focus {
+            outline: 0;
+        }
+
         /****************************************************************************************/
 
         #sketch {
@@ -150,20 +165,20 @@
             resize: none;
             background: transparent;
             font-weight: bold;
-            color: black;
+            color: #eee;
             text-shadow:
-                -2px -2px 0 #fff,
-                0 -2px 0 #fff,
-                2px -2px 0 #fff,
-                2px 0 0 #fff,
-                2px 2px 0 #fff,
-                0 2px 0 #fff,
-                -2px 2px 0 #fff,
-                -2px 0 0 #fff;
+                -1px -1px 0 #000,
+                0 -1px 0 #000,
+                1px -1px 0 #000,
+                1px 0 0 #000,
+                1px 1px 0 #000,
+                0 1px 0 #000,
+                -1px 1px 0 #000,
+                -1px 0 0 #000;
         }
 
         .border_dance {
-            background-image: linear-gradient(90deg, black 50%, transparent 50%), linear-gradient(90deg, black 50%, transparent 50%), linear-gradient(0deg, black 50%, transparent 50%), linear-gradient(0deg, black 50%, transparent 50%);
+            background-image: linear-gradient(90deg, #fff 50%, transparent 50%), linear-gradient(90deg, #fff 50%, transparent 50%), linear-gradient(0deg, #fff 50%, transparent 50%), linear-gradient(0deg, #fff 50%, transparent 50%);
             background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
             background-size: 15px 2px, 15px 2px, 2px 15px, 2px 15px;
             background-position: left top, right bottom, left bottom, right top;
@@ -209,7 +224,10 @@
             width: 2.3em;
             height: 2.3em;
             padding-top: 0.2em;
-            background: #fff;
+            color: #aaa;
+            background: #2f2f2f;
+            border: 0px;
+            border-top: 1px solid #202020;
             display: block;
             font-size: 130%;
             line-height: 0.8;
@@ -223,19 +241,20 @@
         }
 
         #tools button:hover {
-            background: #ccc !important;
+            background: #444 !important;
         }
 
         #tools button.active {
-            background: #cfc;
+            background: #242;
         }
 
         #tools button.active:hover {
-            background: #8f8 !important;
+            background: #262 !important;
         }
 
         #help {
-            background: #fff;
+            background: #282828;
+            color: #ddd;
             width: 50em;
             display: block;
             border: 1px solid #bbb;
@@ -290,7 +309,7 @@
         <button type="button" style="width: 2em; float:right; margin-left: 2em;" data-id="error_close">❌</button>
     </div>
     <div id="tools">
-        <div style="float: left;">
+        <div style="float: left; border:1px solid #202020">
             <button type="button" data-id="prompt_show">📜<br><span>Prompt</span></button>
             <button type="button" data-id="mask_draw">🌗<span>Mask</span></button>
             <button type="button" data-id="mask_show"><span style="top: -0.4em;">show mask</span></button>
