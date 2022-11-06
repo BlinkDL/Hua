@@ -9,7 +9,17 @@ Closed Alpha at this moment. The frontend will be open-source after I finish all
 
 About me: I am working on https://github.com/BlinkDL/RWKV-LM too, whose training is sponsored by Stability. So you can be assured that Hua is safe :)
 
-## How to use
+## Use Colab
+
+https://colab.research.google.com/github/TheLastBen/fast-stable-diffusion/blob/main/fast_stable_diffusion_AUTOMATIC1111.ipynb
+```
+!pip install -q inflection
+
+share='--api --cors-allow-origins=https://www.painthua.com/'
+```
+![](https://raw.githubusercontent.com/BlinkDL/Hua/main/colab_guide.png)
+
+## Use your local A1111 server
 
 This is 100% free.
 
