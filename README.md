@@ -15,7 +15,7 @@ https://colab.research.google.com/github/TheLastBen/fast-stable-diffusion/blob/m
 ```
 !pip install -q inflection
 
-share='--api --cors-allow-origins=https://www.painthua.com/'
+share='--api --cors-allow-origins=https://www.painthua.com'
 ```
 ![](https://raw.githubusercontent.com/BlinkDL/Hua/main/colab_guide.png)
 
