@@ -9,6 +9,10 @@ Closed Alpha at this moment. The frontend will be open-source after I finish all
 
 About me: I am working on https://github.com/BlinkDL/RWKV-LM too, whose training is sponsored by Stability. So you can be assured that Hua is safe :)
 
+![](https://raw.githubusercontent.com/BlinkDL/Hua/main/Hua-Demo.gif)
+
+![](https://raw.githubusercontent.com/BlinkDL/Hua/main/Hua-Demo2.gif)
+
 ## Use Colab
 
 https://colab.research.google.com/github/TheLastBen/fast-stable-diffusion/blob/main/fast_stable_diffusion_AUTOMATIC1111.ipynb
@@ -36,7 +40,3 @@ where xxxxx is a random unoccupied port between 10000 and 60000 (for safety).
 * Run A1111 with --listen to allow LAN access. When connecting to IP other than 127.0.0.1, google "enable mixed content" and change site settings. Because the site is HTTPS but A1111 server is HTTP, so the browser is blocking HTTP requests by default.
 
 Then you can use https://www.PaintHua.com for txt2img / img2img / inpainting / outpainting.
-
-![](https://raw.githubusercontent.com/BlinkDL/Hua/main/Hua-Demo.gif)
-
-![](https://raw.githubusercontent.com/BlinkDL/Hua/main/Hua-Demo2.gif)
