@@ -5,13 +5,13 @@ Website: https://www.PaintHua.com
 
 Discord: https://discord.gg/y9kMYtjgFZ
 
-Closed Alpha at this moment. The frontend will be open-source after I finish all major functions and refactor the code, as now it's full of hacks (100% vanilla JS) and very easy to bring in bugs if one don't fully understand it. Meanwhile I will also write a clean & efficient backend for it and that will be open-source from the beginning. 
-
-About me: I am working on https://github.com/BlinkDL/RWKV-LM too, whose training is sponsored by Stability. So you can be assured that Hua is safe :)
-
 ![](https://raw.githubusercontent.com/BlinkDL/Hua/main/Hua-Demo.gif)
 
 ![](https://raw.githubusercontent.com/BlinkDL/Hua/main/Hua-Demo2.gif)
+
+Closed Alpha at this moment. The frontend will be open-source after I finish all major functions and refactor the code, as now it's full of hacks (100% vanilla JS) and very easy to bring in bugs if one don't fully understand it. Meanwhile I will also write a clean & efficient backend for it and that will be open-source from the beginning. 
+
+About me: I am working on https://github.com/BlinkDL/RWKV-LM too, whose training is sponsored by Stability. So you can be assured that Hua is safe :)
 
 ## Use Colab
 
