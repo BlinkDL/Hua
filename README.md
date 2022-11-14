@@ -5,9 +5,9 @@ Website: https://www.PaintHua.com
 
 Discord: https://discord.gg/y9kMYtjgFZ
 
-![](https://raw.githubusercontent.com/BlinkDL/Hua/main/Hua-Demo.gif)
+B站视频: https://www.bilibili.com/video/BV16e4y1a7ne
 
-![](https://raw.githubusercontent.com/BlinkDL/Hua/main/Hua-Demo2.gif)
+![](https://raw.githubusercontent.com/BlinkDL/Hua/main/Hua-Demo.gif)
 
 Closed Alpha at this moment. The frontend will be open-source after I finish all major functions and refactor the code, as now it's full of hacks (100% vanilla JS) and very easy to bring in bugs if one don't fully understand it. Meanwhile I will also write a clean & efficient backend for it and that will be open-source from the beginning. 
 
@@ -40,3 +40,6 @@ where xxxxx is a random unoccupied port between 10000 and 60000 (for safety).
 * Run A1111 with --listen to allow LAN access. When connecting to IP other than 127.0.0.1, google "enable mixed content" and change site settings. Because the site is HTTPS but A1111 server is HTTP, so the browser is blocking HTTP requests by default.
 
 Then you can use https://www.PaintHua.com for txt2img / img2img / inpainting / outpainting.
+
+![](https://raw.githubusercontent.com/BlinkDL/Hua/main/Hua-Demo2.gif)
+
