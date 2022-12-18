@@ -153,6 +153,12 @@
             border: 1px solid #000;
         }
 
+        #prompt_wrap select {
+            border: 0px;
+            padding: 1em 0;
+            margin: 0;
+        }
+
         /****************************************************************************************/
 
         #sketch {
@@ -295,6 +301,7 @@
             display: block;
             line-height: 1.5;
             padding: 0.5em;
+            border: 1px solid #000;
         }
 
         #error {
@@ -371,13 +378,11 @@
             <div id="help" class="hide"> </div>
             <div id="prompt_wrap" class="hide">
                 <textarea id="prompt"></textarea>
-                <select id="prompt_model" style="zoom: 1.1;">
+                <select id="prompt_model">
                     <option>Loading Model...</option>
-                </select>
-                <select id="prompt_sampler" style="zoom: 1.1;">
+                </select><select id="prompt_sampler">
                     <option>Loading Sampler...</option>
-                </select>
-                <select id="prompt_fill" style="zoom: 1.1;">
+                </select><select id="prompt_fill">
                     <option>fill (0)</option>
                     <option>original (1)</option>
                     <option>latNoise (2)</option>
