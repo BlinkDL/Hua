@@ -147,6 +147,12 @@
             top: 0.15em;
         }
 
+        select {
+            background: #282828;
+            color: #ddd;
+            border: 1px solid #000;
+        }
+
         /****************************************************************************************/
 
         #sketch {
@@ -305,6 +311,18 @@
             color: #ddd;
         }
 
+        #top_right {
+            z-index: 999;
+            position: fixed;
+            display: block;
+            padding: 0.5em;
+            top: 0em;
+            right: 0;
+            border: 1px solid #555;
+            background-color: #282828;
+            color: #ddd;
+        }
+
         #palette {
             width: 10em;
             line-height: 0;
@@ -328,6 +346,8 @@
         <span id="error_msg"></span>
         <button type="button" style="width: 2em; float:right; margin-left: 0.5em;" data-id="error_close">❌</button>
     </div>
+    <div id="top_right" class="hide">
+    </div>
     <div id="tools">
         <div style="float: left; border:1px solid #202020">
             <button type="button" data-id="prompt_show">📜<br><span>Prompt</span></button>
@@ -349,9 +369,25 @@
         </div>
         <div style="z-index: 99; position: absolute; margin-left: 3.2em">
             <div id="help" class="hide"> </div>
-            <textarea id="prompt" class="hide"></textarea>
+            <div id="prompt_wrap" class="hide">
+                <textarea id="prompt"></textarea>
+                <select id="prompt_model" style="zoom: 1.1;">
+                    <option>Loading Model...</option>
+                </select>
+                <select id="prompt_sampler" style="zoom: 1.1;">
+                    <option>Loading Sampler...</option>
+                </select>
+                <select id="prompt_fill" style="zoom: 1.1;">
+                    <option>fill (0)</option>
+                    <option>original (1)</option>
+                    <option>latNoise (2)</option>
+                    <option>latNothing (3)</option>
+                </select>
+            </div>
             <div id="palette" class="hide"></div>
-            <textarea id="config" class="hide"></textarea>
+            <div id="config_wrap" class="hide">
+                <textarea id="config"></textarea>
+            </div>
         </div>
     </div>
     <div id="sketch">
